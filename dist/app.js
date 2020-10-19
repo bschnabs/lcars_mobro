@@ -150,7 +150,7 @@ _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( 
 
         case 5:
           data = _context.sent;
-          MobroSDK.addChannelListener("amd_50_years_cpu_fan_rpm", function (data) {
+          MobroSDK.addChannelListener("processor", function (data) {
             console.log(data.payload);
           });
           console.log(data);
