@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var cpuTempBars, cpuTempVal, data, cpuBars, x, staticTemp;
+  var cpuTempBars, cpuTempVal, cpuLoadBars, cpuLoadVal, data, cpuBars, x, staticTemp;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
@@ -145,10 +145,15 @@ _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( 
           // var top = document.getElementById("cpuTemp8.3");
           // top.classList.remove('lcars-red-alert-bg');
           // top.classList.add('lcars-danub-bg');
+
+          /*CPU VARIABLES*/
           cpuTempBars = document.querySelectorAll('div[id*="cpuTemp"]');
           cpuTempVal = document.getElementById('cpuTmpVal');
-          _context.next = 4;
+          cpuLoadBars = document.querySelectorAll('div[id*="cpuLoad"]');
+          cpuLoadVal = document.getElementById('cpuLdVal');
+          _context.next = 6;
           return MobroSDK.init().then(function () {
+            /*CPU TEMP*/
             MobroSDK.addChannelListener('general_processor_temperature', function (data) {
               var temp = data.payload.value;
               cpuTempVal.innerText = temp + String.fromCharCode(176) + 'C';
@@ -169,13 +174,35 @@ _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( 
                 }
               }
             });
+            /*CPU LOAD*/
+
+            MobroSDK.addChannelListener('general_processor_usage', function (data) {
+              var load = data.payload.value;
+              cpuLoadVal.innerText = load.toFixed(2) + '%';
+
+              for (var x = 0; x < cpuLoadBars.length; x++) {
+                var staticLoad = cpuLoadBars[x].id.replace('cpuLoad', '');
+
+                if (staticLoad > load) {
+                  cpuLoadBars[x].classList.remove('lcars-red-alert-bg');
+                  cpuLoadBars[x].classList.remove('lcars-red-alert-color');
+                  cpuLoadBars[x].classList.add('lcars-danub-bg');
+                  cpuLoadBars[x].classList.add('lcars-danub-color');
+                } else {
+                  cpuLoadBars[x].classList.add('lcars-red-alert-bg');
+                  cpuLoadBars[x].classList.add('lcars-red-alert-color');
+                  cpuLoadBars[x].classList.remove('lcars-danub-bg');
+                  cpuLoadBars[x].classList.remove('lcars-danub-color');
+                }
+              }
+            });
           });
 
-        case 4:
-          _context.next = 6;
+        case 6:
+          _context.next = 8;
           return MobroSDK.emit("monitor:sensor:data", "general_processor_usage");
 
-        case 6:
+        case 8:
           data = _context.sent;
           console.log(data.value);
           cpuBars = document.querySelectorAll('div[id*="cpuTemp"]');
@@ -193,7 +220,7 @@ _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( 
             }
           }
 
-        case 11:
+        case 13:
         case "end":
           return _context.stop();
       }

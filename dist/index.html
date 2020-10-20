@@ -14,52 +14,91 @@
             <div class="lcars-bar header horizontal lcars-danub-bg"></div>
          </div>
          
-         <!-- class="lcars-element lcars-u-1 left-rounded" -->
-         <!-- class="lcars-element lcars-u-1 right-rounded" -->
-
          <div>
-            <div id="cpuTmpVal">TEMP</div>
-            <div id="cpuLdVal" >LOAD</div> 
+            <div id="cpuTmpVal" class="lcars-element left-rounded" style="float: left; height: auto;">TEMP</div> <!--float left-->
+            <div id="cpuLdVal" class="lcars-element right-rounded" style="float: right; height: auto;">LOAD</div> <!--float right-->
          </div>
 
          <div class="lcars-column lcars-u-2">
             <div class="lcars-bracket top hollow"></div>
-               <div class="lcars-column"> <!--lcars-u-1 will make it squishy-->
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+               <div>
+                  <div class="lcars-column" style="width:50%; float: left;"> <!--lcars-u-1 will make it squishy-->
+                     <!--left side: CPU TEMP-->
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>                  
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>                  
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>                  
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                        <div id="cpuTemp8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
                   </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>                  
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>                  
-                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto;">
-                     <div id="cpuTemp16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                  </div>                  
-                  <div class="lcars-element rounded lcars-danub-bg"style="height: auto;" >
-                     <div id="cpuTemp8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                  <div class="lcars-column" style="width: 50%; float: right">
+                     <!--right side: CPU LOAD-->
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>                  
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>                  
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>                  
+                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                        <div id="cpuLoad8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
+                     </div>
                   </div>
                </div>
             <div class="lcars-bracket bottom hollow"></div>
