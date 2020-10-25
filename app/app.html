@@ -3,7 +3,7 @@
 <head>
     <title>MoBro Theme SDK</title>
     <link rel="stylesheet" href="app.css">
-    <!-- <link rel="stylesheet"  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
    <div class="lcars-app-container">
@@ -14,7 +14,7 @@
             <div class="lcars-bar header horizontal lcars-danub-bg"></div>
          </div>
          
-         <div>
+         <div style="padding-top: 1rem;">
             <div id="cpuTmpVal" class="lcars-element left-rounded" style="float: left; font-size: x-large; height: auto;">TEMP</div> <!--float left-->
             <div id="cpuLdVal" class="lcars-element right-rounded" style="float: right; font-size: x-large; height: auto;">LOAD</div> <!--float right-->
          </div>
@@ -137,7 +137,8 @@
             <div class="lcars-bar horizontal right-end decorated"></div>
          </div>
 
-         <div style="width: 100%">
+         <!--Left Bar-->
+         <div style="width: 100%; display: flex">
             <div class="lcars-u-1 lcars-vu-6" style="float: left;">
                <!--middle left bar-->
                <div class="lcars-bar lcars-u-1 lcars-vu-4 right lcars-tan-bg"></div>
@@ -174,21 +175,38 @@
                </div>
             </div>
 
-            <div class="lcars-column" style="width: 75%; float: right;" >
+            <!--Main bar area-->
+            <div class="lcars-column lcars" style="width: 75%; float: right;" >
+               <!--TEMP ROW-->
                <div class="lcars-row">
                   <div class="lcars-bracket left hollow">
                      <div></div>
                   </div>
-   
-                  <div class="lcars-bar horizontal lcars-melrose-bg"></div>
-                  
-   
+                  <div class="lcars-bar horizontal lcars-golden-tanoi-bg" style="height: auto;">
+                     <div id="gpuTempBar" class="lcars-element rounded lcars-blue-bell-bg" 
+                        style="margin: 5px; vertical-align: middle; align-items: center; width: 5%; justify-content: space-around;">TEMP</div>
+                  </div>
                   <div class="lcars-bracket right hollow">
                      <div></div>
                   </div>
                </div>
-               
+
+               <!--LOAD ROW-->
+               <div class="lcars-row">
+                  <div class="lcars-bracket left hollow">
+                     <div></div>
+                  </div>
+                  <div class="lcars-bar horizontal lcars-golden-tanoi-bg" style="height: auto;">
+                     <div id="gpuLoadBar" class="lcars-element rounded lcars-blue-bell-bg" 
+                        style="margin: 5px; vertical-align: middle; align-items: center; width: 5%; justify-content: space-around;">LOAD</div>
+                  </div>
+                  <div class="lcars-bracket right hollow">
+                     <div></div>
+                  </div>
+               </div>
             </div>
+
+
          </div>
 
          <!--footer-->

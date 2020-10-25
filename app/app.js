@@ -16,6 +16,10 @@ import "../lcars/css/lcars.css"
    var cpuLoadBars = document.querySelectorAll('div[id*="cpuLoad"]');
    var cpuLoadVal = document.getElementById('cpuLdVal');
 
+   /*GPU VARIABLES*/
+   var gpuTempBar = document.getElementById('gpuTempBar');
+   var gpuLoadBar = document.getElementById('gpuLoadBar');
+
    await MobroSDK.init().then(() => {
       /*CPU TEMP*/
       MobroSDK.addChannelListener('general_processor_temperature', (data) => {
@@ -55,6 +59,20 @@ import "../lcars/css/lcars.css"
                cpuLoadBars[x].classList.remove('lcars-danub-color');
             }
          }
+      });
+
+      /*GPU TEMP*/
+      MobroSDK.addChannelListener('general_graphics_temperature', (data) => {
+         var gpuTempPerc = data.payload.value + '%';
+         gpuTempBar.style.width = gpuTempPerc;
+         gpuTempBar.innerText = data.payload.value + String.fromCharCode(176) + 'C'
+      });
+
+      /*GPU LOAD*/
+      MobroSDK.addChannelListener('general_graphics_usage', (data) => {
+         var gpuLoadPerc = data.payload.value + '%';
+         gpuLoadBar.style.width = gpuLoadPerc;
+         gpuLoadBar.innerText = gpuLoadPerc;
       });
    });
 
