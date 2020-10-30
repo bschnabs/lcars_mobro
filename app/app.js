@@ -3,13 +3,6 @@ import "../lcars/css/lcars.css"
 
 (async () => {
 
-   // console.log('test');
-   // console.log(document);
-   // var top = document.getElementById("cpuTemp8.3");
-   // top.classList.remove('lcars-red-alert-bg');
-   // top.classList.add('lcars-danub-bg');
-
-
    /*CPU VARIABLES*/
    var cpuTempBars = document.querySelectorAll('div[id*="cpuTemp"]');
    var cpuTempVal = document.getElementById('cpuTmpVal');
@@ -20,7 +13,7 @@ import "../lcars/css/lcars.css"
    var gpuTempBar = document.getElementById('gpuTempBar');
    var gpuLoadBar = document.getElementById('gpuLoadBar');
 
-   await MobroSDK.init().then(() => {
+   await MobroSDK.init().then(async () => {
       /*CPU TEMP*/
       MobroSDK.addChannelListener('general_processor_temperature', (data) => {
          var temp = data.payload.value;
@@ -74,14 +67,34 @@ import "../lcars/css/lcars.css"
          gpuLoadBar.style.width = gpuLoadPerc;
          gpuLoadBar.innerText = gpuLoadPerc;
       });
+
+
+      /*OBTAIN TOTAL RAM*/
+      let ramAvail = await MobroSDK.emit("monitor:sensor:data", "general_memory_available");
+      let ramUsed = await MobroSDK.emit("monitor:sensor:data", "general_memory_used");
+      var totalRam = +ramUsed.value + +ramAvail.value;
+
+      var ramUsageGraph = document.querySelectorAll('path[id*="ramArray"]');
+
+      /*RAM*/
+      MobroSDK.addChannelListener('general_memory_used', (data) => {
+         for (var x = 0; x < ramUsageGraph.length; x++) {
+            ramUsageGraph[x].classList.remove('lcarsFade'); //remove to reset
+            var ramUsagePerc = +data.payload.value / +totalRam; //total RAM used
+            var staticRam = ramUsageGraph[x].id.replace('ramArray', ''); //value of element ID in RAM array
+
+            if ((+staticRam / +ramUsageGraph.length) <= ramUsagePerc) {
+               ramUsageGraph[x].classList.add('lcarsFade');
+            } else {
+               ramUsageGraph[x].classList.remove('lcarsFade');
+            }
+         }
+      });
    });
 
-   /*CPU LOAD*/
 
    let data = await MobroSDK.emit("monitor:sensor:data", "general_processor_usage");
-   console.log(data.value);
    var cpuBars = document.querySelectorAll('div[id*="cpuTemp"]');
-   console.log(cpuBars);
    for (var x = 0; x < cpuBars.length; x++) {
       //console.log(cpuBars[x].id.replace('cpuTemp', ''));
       var staticTemp = cpuBars[x].id.replace('cpuTemp', '');
