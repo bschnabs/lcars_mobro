@@ -1,115 +1,146 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>MoBro Theme SDK</title>
-    <link rel="stylesheet" href="app.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+   <title>MoBro Theme SDK</title>
+   <link rel="stylesheet" href="app.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 </head>
+
 <body>
    <div class="lcars-app-container">
 
-   <!-- CPU -->
+      <!-- CPU -->
       <div class="lcars-column lcars-u-2 lcars-vu-9">
          <div class="lcars-row header lcars-u-2">
             <div class="lcars-bar header horizontal lcars-danub-bg"></div>
          </div>
-         
+
          <div style="padding-top: 1rem;">
-            <div id="cpuTmpVal" class="lcars-element left-rounded" style="float: left; font-size: x-large; height: auto;">TEMP</div> <!--float left-->
-            <div id="cpuLdVal" class="lcars-element right-rounded" style="float: right; font-size: x-large; height: auto;">LOAD</div> <!--float right-->
+            <div id="cpuTmpVal" class="lcars-element left-rounded"
+               style="float: left; font-size: x-large; height: auto;">TEMP</div>
+            <!--float left-->
+            <div id="cpuLdVal" class="lcars-element right-rounded"
+               style="float: right; font-size: x-large; height: auto;">LOAD</div>
+            <!--float right-->
          </div>
 
          <div class="lcars-column lcars-u-2">
             <div class="lcars-bracket top hollow"></div>
-               <div>
-                  <div class="lcars-column" style="width:50%; float: left;"> <!--lcars-u-1 will make it squishy-->
-                     <!--left side: CPU TEMP-->
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>                  
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>                  
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>                  
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
-                        <div id="cpuTemp8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
+            <div>
+               <div class="lcars-column" style="width:50%; float: left;">
+                  <!--lcars-u-1 will make it squishy-->
+                  <!--left side: CPU TEMP-->
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
                   </div>
-                  <div class="lcars-column lcars-u-1" style="width: 50%; float: right">
-                     <!--right side: CPU LOAD-->
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>                  
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>                  
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>                  
-                     <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
-                        <div id="cpuLoad8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color" style="margin: 2px; height: auto;">X</div>
-                     </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:left;">
+                     <div id="cpuTemp8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
                   </div>
                </div>
+               <div class="lcars-column lcars-u-1" style="width: 50%; float: right">
+                  <!--right side: CPU LOAD-->
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad99.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad91.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad83" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad74.7" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad66.4" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad58.1" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad49.8" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad41.5" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad33.2" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad24.9" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad16.6" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+                  <div class="lcars-element rounded lcars-danub-bg" style="height: auto; float:right;">
+                     <div id="cpuLoad8.3" class="lcars-element rounded lcars-red-alert-bg lcars-red-alert-color"
+                        style="margin: 2px; height: auto;">X</div>
+                  </div>
+               </div>
+            </div>
             <div class="lcars-bracket bottom hollow"></div>
          </div>
-         
+
 
          <div class="lcars-row lcars-u-2 lcars-vu-8">
             <div class="lcars-bar bottom horizontal lcars-danub-bg"></div>
          </div>
       </div>
-      
+
       <div class="lcars-column lcars-vu-9">
          <div class="lcars-row header">
             <!-- <div class="lcars-bar header horizontal lcars-danub-bg"></div> -->
@@ -122,19 +153,15 @@
             <div class="lcars-elbow right-top lcars-danub-bg"></div>
          </div>
       </div>
-      
+
 
       <!-- GPU -->
-      
-      <div class="lcars-column lcars-u-5 lcars-vu-9" style="padding-left: 1em;">
+
+      <div class="lcars-column lcars-u-1 lcars-vu-9" style="padding-left: 1em;">
 
          <!--top row header-->
          <div class="lcars-row header">
             <div class="lcars-elbow left-bottom lcars-tan-bg"></div>
-            <div class="lcars-bar horizontal">
-               <div class="lcars-title right">LCARS</div>
-            </div>
-            <div class="lcars-bar horizontal right-end decorated"></div>
          </div>
 
          <div style="width: 100%; display: flex">
@@ -143,121 +170,153 @@
                <!--middle left bar-->
                <div class="lcars-bar lcars-u-1 lcars-vu-4 right lcars-tan-bg"></div>
                <div class="lcars-u-1 lcars-vu-1">
-                  <svg version="1.1" viewBox="-10 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <svg version="1.1" viewBox="-10 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                      <metadata>
                         <rdf:RDF>
                            <cc:Work rdf:about="">
                               <dc:format>image/svg+xml</dc:format>
-                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                              <dc:title/>
+                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                              <dc:title />
                            </cc:Work>
                         </rdf:RDF>
                      </metadata>
-                     <path id="xy_ctl_NE" class="button lcars-husk-bg" d="m47 33v-32.35c15.992 2.4474 29.977 16.417 32.424 32.35z" />
-                     <path id="xy_ctl_SW" class="button lcars-husk-bg" d="m33 47v32.35c-15.992-2.4474-29.977-16.417-32.424-32.35z" />
-                     <path id="xy_ctl_SE" class="button lcars-husk-bg" d="m47 47v32.35c15.992-2.4474 29.977-16.417 32.424-32.35z" />
-                     <path id="xy_ctl_up" class="button lcars-golden-tanoi-bg" d="m34 10h12v-9.5c-3.8785-0.47437-8.044-0.4824-12 0z" />
-                     <path d="m44.2 2.2v5.0271" style="fill:none;stroke-width:1.2;stroke:#000000"/>
-                     <path id="xy_ctl_left" class="button lcars-golden-tanoi-bg" d="m10 46v-12h-9.5c-0.47437 3.8785-0.4824 8.044 0 12z" />
-                     <path d="m2.199 35.8h5.0271" style="fill:none;opacity:.889;stroke-width:1.2;stroke:#000000"/>
-                     <path id="xy_ctl_right" class="button lcars-golden-tanoi-bg" d="m70 34v12h9.5c0.47437-3.8785 0.4824-8.044 0-12z" />
-                     <path d="m77.801 44.2h-5.0271" style="fill:none;stroke-width:1.2;stroke:#000000"/>
-                     <path id="xy_ctl_down" class="button lcars-golden-tanoi-bg" d="m46 70h-12v9.5c3.8785 0.47437 8.044 0.4824 12 0z" />
-                     <path d="m35.8 77.8v-5.0271" style="fill:none;stroke-width:1.2;stroke:#000000"/>
-                     <path d="m11 34v12h23v23h12v-23h23v-12h-23v-23h-12v23z" class="lcars-blue-bell-bg"/>
-                     <path d="m34 13.49h12" style="fill:none;stroke-width:.75;stroke:#000000"/>
-                     <path d="m34 16.2h12" style="fill:none;stroke-width:.75;stroke:#000000"/>
-                     <path d="m34 19.48h12" style="fill:none;stroke-width:.75;stroke:#000000"/>
-                     <path d="m34 27.9h12" style="fill:none;stroke-width:.75;stroke:#000000"/>
-                     <path d="m34 59h12" style="fill:none;stroke-width:.75;stroke:#000000"/>
-                     <path id="xy_ctl_NW" class="button lcars-husk-bg" d="m32.977 33v-32.35c-15.992 2.4474-29.977 16.417-32.424 32.35z" />
+                     <path id="xy_ctl_NE" class="button lcars-husk-bg"
+                        d="m47 33v-32.35c15.992 2.4474 29.977 16.417 32.424 32.35z" />
+                     <path id="xy_ctl_SW" class="button lcars-husk-bg"
+                        d="m33 47v32.35c-15.992-2.4474-29.977-16.417-32.424-32.35z" />
+                     <path id="xy_ctl_SE" class="button lcars-husk-bg"
+                        d="m47 47v32.35c15.992-2.4474 29.977-16.417 32.424-32.35z" />
+                     <path id="xy_ctl_up" class="button lcars-golden-tanoi-bg"
+                        d="m34 10h12v-9.5c-3.8785-0.47437-8.044-0.4824-12 0z" />
+                     <path d="m44.2 2.2v5.0271" style="fill:none;stroke-width:1.2;stroke:#000000" />
+                     <path id="xy_ctl_left" class="button lcars-golden-tanoi-bg"
+                        d="m10 46v-12h-9.5c-0.47437 3.8785-0.4824 8.044 0 12z" />
+                     <path d="m2.199 35.8h5.0271" style="fill:none;opacity:.889;stroke-width:1.2;stroke:#000000" />
+                     <path id="xy_ctl_right" class="button lcars-golden-tanoi-bg"
+                        d="m70 34v12h9.5c0.47437-3.8785 0.4824-8.044 0-12z" />
+                     <path d="m77.801 44.2h-5.0271" style="fill:none;stroke-width:1.2;stroke:#000000" />
+                     <path id="xy_ctl_down" class="button lcars-golden-tanoi-bg"
+                        d="m46 70h-12v9.5c3.8785 0.47437 8.044 0.4824 12 0z" />
+                     <path d="m35.8 77.8v-5.0271" style="fill:none;stroke-width:1.2;stroke:#000000" />
+                     <path d="m11 34v12h23v23h12v-23h23v-12h-23v-23h-12v23z" class="lcars-blue-bell-bg" />
+                     <path d="m34 13.49h12" style="fill:none;stroke-width:.75;stroke:#000000" />
+                     <path d="m34 16.2h12" style="fill:none;stroke-width:.75;stroke:#000000" />
+                     <path d="m34 19.48h12" style="fill:none;stroke-width:.75;stroke:#000000" />
+                     <path d="m34 27.9h12" style="fill:none;stroke-width:.75;stroke:#000000" />
+                     <path d="m34 59h12" style="fill:none;stroke-width:.75;stroke:#000000" />
+                     <path id="xy_ctl_NW" class="button lcars-husk-bg"
+                        d="m32.977 33v-32.35c-15.992 2.4474-29.977 16.417-32.424 32.35z" />
                   </svg>
                </div>
             </div>
-
-            <!--Main bar area-->
-            <div class="lcars-column lcars" style="width: 75%; float: right;" >
-               <!--TEMP ROW-->
-               <div class="lcars-row">
-                  <div class="lcars-bracket left hollow">
-                     <div></div>
-                  </div>
-                  <div class="lcars-bar horizontal lcars-golden-tanoi-bg" style="height: auto;">
-                     <div id="gpuTempBar" class="lcars-element rounded lcars-blue-bell-bg" 
-                        style="margin: 5px; vertical-align: middle; align-items: center; width: 5%; justify-content: space-around;">TEMP</div>
-                  </div>
-                  <div class="lcars-bracket right hollow">
-                     <div></div>
-                  </div>
-               </div>
-
-               <!--LOAD ROW-->
-               <div class="lcars-row">
-                  <div class="lcars-bracket left hollow">
-                     <div></div>
-                  </div>
-                  <div class="lcars-bar horizontal lcars-golden-tanoi-bg" style="height: auto;">
-                     <div id="gpuLoadBar" class="lcars-element rounded lcars-blue-bell-bg" 
-                        style="margin: 5px; vertical-align: middle; align-items: center; width: 5%; justify-content: space-around;">LOAD</div>
-                  </div>
-                  <div class="lcars-bracket right hollow">
-                     <div></div>
-                  </div>
-               </div>
-
-               <div>
-                  <svg width="45mm" height="45mm" version="1.1" viewBox="0 0 80 80" style="padding-left: 35px; padding-top: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                     <title>lcars_rectangular_array_ctl</title>
-                     <metadata>
-                        <rdf:RDF>
-                           <cc:Work rdf:about="">
-                              <dc:format>image/svg+xml</dc:format>
-                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                              <dc:title>lcars_rectangular_array_ctl</dc:title>
-                           </cc:Work>
-                        </rdf:RDF>
-                     </metadata>
-                     <g transform="translate(0,-217)">
-                        <path id="ramArray11" class="button lcars-golden-tanoi-bg" transform="translate(0,212)" d="m35 14.5h45.036v-9.4892h-80.036v7.4892h35z" />
-                        <path id="ramArray10" class="button lcars-neon-carrot-bg" transform="translate(0,212)" d="m33 16.178h-33v38.822h33z" />
-
-                        <!--black fill squares-->
-                        <!-- <path d="m8 252.63h14v9.5549h-14z" style="fill:#000000"/>
-                        <path d="m8 284.04h14v6.909h-14z" style="fill:#000000"/>
-                        <path d="m39.51 240.84h7.1208v4.2632h-7.1208z" style="fill:#000000"/> -->
-
-                        <path id="ramArray9" d="m0 273h33v4.6952h-32.976z" style="fill:#ee9955"/>
-                        <!--rect_array_ctl_BL-->
-                        <path id="ramArray8" class="button lcars-sandy-brown-bg" d="m0 279.56h33v17.439h-32.866z" />
-
-                        <path id="ramArray7" class="button lcars-pale-canary-bg" transform="translate(0,212)" d="m35 62.488h13v3.948h-13z" />
-                        <path id="ramArray7" d="m35 283.76h13v1.8313h-13z" style="fill:#ffff99"/>
-                        <path id="ramArray7" d="m35 290.3h13v1.8313h-13z" style="fill:#cc6666"/>
-                        <path id="ramArray7" class="button lcars-chestnut-rose-bg" d="m35 293.7h13v3.2865h-13z" />
-
-
-                        <path id="ramArray6" class="button lcars-neon-carrot-bg" d="m50 273h30.32v24.189h-30.32z" />
-                        <path id="ramArray5" d="m50 260.99h30.114v6.0146h-30.114z" style="fill:#ee9955"/>
-                        <path id="ramArray4" d="m50 258.37h30.047v1.5422h-30.047z" style="fill:#ee9955"/>
-                        <path id="ramArray3" d="m35 232.99h45.036v1.9773h-45.036z" style="fill:#ee9955"/>
-                        <path id="ramArray2" class="button lcars-sandy-brown-bg" d="m35 237h45.047v17.002h-32.047v5.9832h-13z" />
-                        <path id="ramArray1" class="button lcars-atomic-tangerine-bg" transform="translate(0,212)" d="m35 55h13v5.0063h-13z" />
-                     </g>
-                  </svg>
-               </div>
-            </div>   
          </div>
 
          <!--footer-->
+         <div class="lcars-row bottom lcars-vu-8" style="align-items: flex-end;">
+            <div class="lcars-elbow bottom left-top lcars-tan-bg"></div>
+         </div>
+      </div>
+
+      <div class="lcars-column lcars-u-4 lcars-vu-9">
+
          <div class="lcars-row">
-            
-            <div class="lcars-elbow left-top lcars-tan-bg"></div>
-            
+            <div class="lcars-bar horizontal">
+               <div class="lcars-title header right">LCARS</div>
+            </div>
+            <div class="lcars-bar horizontal right-end decorated"></div>
+         </div>
+
+         <!--TEMP ROW-->
+         <div class="lcars-row">
+            <div class="lcars-bracket left hollow">
+               <div></div>
+            </div>
+            <div class="lcars-bar horizontal lcars-golden-tanoi-bg" style="height: auto;">
+               <div id="gpuTempBar" class="lcars-element rounded lcars-blue-bell-bg"
+                  style="margin: 5px; vertical-align: middle; align-items: center; width: 5%; justify-content: space-around;">
+                  TEMP</div>
+            </div>
+            <div class="lcars-bracket right hollow">
+               <div></div>
+            </div>
+         </div>
+
+         <!--LOAD ROW-->
+         <div class="lcars-row">
+            <div class="lcars-bracket left hollow">
+               <div></div>
+            </div>
+            <div class="lcars-bar horizontal lcars-golden-tanoi-bg" style="height: auto;">
+               <div id="gpuLoadBar" class="lcars-element rounded lcars-blue-bell-bg"
+                  style="margin: 5px; vertical-align: middle; align-items: center; width: 5%; justify-content: space-around;">
+                  LOAD</div>
+            </div>
+            <div class="lcars-bracket right hollow">
+               <div></div>
+            </div>
+         </div>
+
+         <!--RAM-->
+         <div>
+            <svg width="45mm" height="45mm" version="1.1" viewBox="0 0 80 80"
+               style="padding-left: 35px; padding-top: 10px;" xmlns="http://www.w3.org/2000/svg"
+               xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+               <title>lcars_rectangular_array_ctl</title>
+               <metadata>
+                  <rdf:RDF>
+                     <cc:Work rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                        <dc:title>lcars_rectangular_array_ctl</dc:title>
+                     </cc:Work>
+                  </rdf:RDF>
+               </metadata>
+               <g transform="translate(0,-217)">
+                  <path id="ramArray11" class="button lcars-golden-tanoi-bg" transform="translate(0,212)"
+                     d="m35 14.5h45.036v-9.4892h-80.036v7.4892h35z" />
+                  <path id="ramArray10" class="button lcars-neon-carrot-bg" transform="translate(0,212)"
+                     d="m33 16.178h-33v38.822h33z" />
+
+                  <!--black fill squares-->
+                  <!-- <path d="m8 252.63h14v9.5549h-14z" style="fill:#000000"/>
+                  <path d="m8 284.04h14v6.909h-14z" style="fill:#000000"/>
+                  <path d="m39.51 240.84h7.1208v4.2632h-7.1208z" style="fill:#000000"/> -->
+
+                  <path id="ramArray9" d="m0 273h33v4.6952h-32.976z" style="fill:#ee9955" />
+                  <!--rect_array_ctl_BL-->
+                  <path id="ramArray8" class="button lcars-sandy-brown-bg" d="m0 279.56h33v17.439h-32.866z" />
+
+                  <path id="ramArray7" class="button lcars-pale-canary-bg" transform="translate(0,212)"
+                     d="m35 62.488h13v3.948h-13z" />
+                  <path id="ramArray7" d="m35 283.76h13v1.8313h-13z" style="fill:#ffff99" />
+                  <path id="ramArray7" d="m35 290.3h13v1.8313h-13z" style="fill:#cc6666" />
+                  <path id="ramArray7" class="button lcars-chestnut-rose-bg" d="m35 293.7h13v3.2865h-13z" />
+
+
+                  <path id="ramArray6" class="button lcars-neon-carrot-bg" d="m50 273h30.32v24.189h-30.32z" />
+                  <path id="ramArray5" d="m50 260.99h30.114v6.0146h-30.114z" style="fill:#ee9955" />
+                  <path id="ramArray4" d="m50 258.37h30.047v1.5422h-30.047z" style="fill:#ee9955" />
+                  <path id="ramArray3" d="m35 232.99h45.036v1.9773h-45.036z" style="fill:#ee9955" />
+                  <path id="ramArray2" class="button lcars-sandy-brown-bg"
+                     d="m35 237h45.047v17.002h-32.047v5.9832h-13z" />
+                  <path id="ramArray1" class="button lcars-atomic-tangerine-bg" transform="translate(0,212)"
+                     d="m35 55h13v5.0063h-13z" />
+               </g>
+            </svg>
+         </div>
+
+
+         <!--FOOTER-->
+         <div class="lcars-row bottom lcars-vu-8">
             <div class="lcars-bar horizontal both-divider bottom"></div>
-            
+
             <div class="lcars-bar horizontal right-end left-divider bottom"></div>
          </div>
       </div>
    </div>
 </body>
+
 </html>
