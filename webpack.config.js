@@ -50,6 +50,9 @@ module.exports = {
             'style-loader',
             'css-loader'
          ]
-      }],
+      },{
+         test: /\.(woff|woff2|otf|eot)$/,
+         use: 'file?name=fonts/[name].[ext]!static'
+     }],
    }
 };

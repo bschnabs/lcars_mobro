@@ -1,5 +1,6 @@
 html, body {
    background-color: black;
+   /* font-family: 'antonio'; */
 }
 
 .lcarsFade {
@@ -11,3 +12,8 @@ html, body {
  50% { opacity: 1; }
  100% { opacity: 0;}
 }
+/* 
+@font-face {
+   font-family: 'lcars';
+   src: url("./Okuda.otf") format("opentype");
+} */
